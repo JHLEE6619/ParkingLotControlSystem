@@ -1,0 +1,28 @@
+﻿<Page x:Class="Client3.View.PrePayment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client3.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="450"
+      Title="PrePayment">
+
+    <Grid Background="White">
+        <Grid Margin="40,100,40,50" Background="#FFCACACA">
+            <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+    </Grid>
+    <TextBlock HorizontalAlignment="Left" Margin="30,30,0,0" TextWrapping="Wrap" Text="요금 사전 정산" VerticalAlignment="Top"
+           FontSize="24" FontWeight="Bold"/>
+    </Grid>
+</Page>
