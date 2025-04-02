@@ -5,7 +5,16 @@
     <Compile Update="View\Main.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Payment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Period_Extension.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\PrePayment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

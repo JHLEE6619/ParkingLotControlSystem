@@ -21,3 +21,7 @@ C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\ref
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\Client3.pdb
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\Client3.genruntimeconfig.cache
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\ref\Client3.dll
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\PrePayment.g.cs
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Registration.g.cs
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\PrePayment.baml
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Registration.baml
