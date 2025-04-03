@@ -25,3 +25,8 @@ C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\Vie
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Registration.g.cs
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\PrePayment.baml
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Registration.baml
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Payment.g.cs
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Period_Extension.g.cs
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Payment.baml
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Period_Extension.baml

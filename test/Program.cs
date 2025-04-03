@@ -55,6 +55,16 @@ namespace test
             }
             Console.ReadLine();
 
+            //DateTime now = DateTime.Now;
+            //DateOnly dateOnly = new DateOnly(2025, 04, 03);
+            //TimeOnly timeOnly = new TimeOnly(19, 21, 15);
+            //DateTime test = new DateTime(dateOnly, timeOnly);
+            //TimeSpan dif = test - now;
+            //double diff = dif.TotalMinutes;
+            //Console.WriteLine(now.ToString("MM월 dd일 HH시 mm분"));
+            //Console.WriteLine(test.ToString("MM월 dd일 HH시 mm분"));
+            //Console.WriteLine((int)diff);
+
         }
 
         private byte[]? Read_Img(FileInfo file, int readSize, int readOffset)
