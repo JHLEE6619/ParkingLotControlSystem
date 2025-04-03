@@ -44,21 +44,34 @@ namespace Server.Controller
 
             Dictionary<int, int> imgOffset = [];
 
+            int num = 0;
             while (true)
             {
-                int len = stream.Read(buf, 0, buf.Length);
+                int received = 0, len;
+
+                len = stream.Read(buf, 0, buf.Length);
                 //await stream.ReadAsync(buf, 0, 5).ConfigureAwait(false);
+                if (len == 0) break; // 연결 종료
+
                 imgId = BitConverter.ToInt32(buf.AsSpan()[0..4]);
                 imgSize = BitConverter.ToInt64(buf.AsSpan()[4..12]);
                 imgType = buf[12];
-                imgBinary = buf[13..^1];
+                imgBinary = buf[13..buf.Length];
                 imgOffset.TryAdd(imgId, offset); // TryAdd 키가 없으면 추가하고 true 반환, 있으면 추가하지 않고 false 반환
-                Write_img(imgBinary, imgId, imgType, imgOffset[imgId]);
-                imgOffset[imgId] += 1011; // 실제로 읽은만큼 offset
+
+                int writeSize;
+                if (imgSize < imgBinary.Length)
+                    writeSize = (int)imgSize;
+                else writeSize = imgBinary.Length;
+
+                Write_img(imgBinary, imgId, imgType, imgOffset[imgId], writeSize);
+                imgOffset[imgId] += imgBinary.Length; // 실제로 읽은만큼 offset
+                Console.WriteLine(++num);
+                Console.WriteLine(writeSize);
             }
         }
 
-        private void Write_img(byte[] imgBinary, int imgId, byte imgType, int offset)
+        private void Write_img(byte[] imgBinary, int imgId, byte imgType, int offset, int writeSize)
         {
             string folderName = "";
             switch (imgType)
@@ -68,7 +81,6 @@ namespace Server.Controller
                 case 2: folderName = "Parking Lot"; break;
             }
             string path = @$"/img/{folderName}";
-            Console.WriteLine(Path.GetFullPath(path));
 
             if (Directory.Exists(path) == false)
             {
@@ -77,10 +89,11 @@ namespace Server.Controller
             }
 
             string saveDir = @$"/img/{folderName}/{imgId}.jpg";
-            using (var stream = new FileStream(saveDir, FileMode.Create, FileAccess.Write))
-            {              
+            using (var stream = new FileStream(saveDir, FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                stream.Seek(offset, SeekOrigin.Begin);
                 // 파일 쓰기
-                stream.Write(imgBinary, offset, imgBinary.Length);
+                stream.Write(imgBinary, 0, writeSize);
             }
         }
     }

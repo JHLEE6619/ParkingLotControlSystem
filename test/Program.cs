@@ -22,7 +22,9 @@ namespace test
             int readSize = buf.Length - headerSize;
             int readOffset = 0; // 이미지 읽기용 오프셋
 
-            while (imgSize > readOffset)
+            int num = 0;
+
+            while (imgSize > 0)
             {
                 // 이미지 식별자
                 serializedInt = BitConverter.GetBytes(imgId);
@@ -39,13 +41,20 @@ namespace test
                 offset += imgType.Length;
 
                 // 이미지 데이터
+                if (imgSize < readSize) readSize = (int)imgSize;
                 byte[]? imgBinary = program.Read_Img(file, readSize, readOffset);
-                readOffset += readSize;
+                if (imgBinary == null) break;
                 Array.Copy(imgBinary, 0, buf, offset, imgBinary.Length);
+                stream.Write(buf, 0, offset + imgBinary.Length); // 정확한 길이만큼 전송
 
+                imgSize -= readSize;
+                readOffset += readSize;
                 offset = 0;
-                stream.Write(buf, 0, buf.Length);
+                Console.WriteLine(++num);
+                Console.WriteLine(imgSize);
             }
+            Console.ReadLine();
+
         }
 
         private byte[]? Read_Img(FileInfo file, int readSize, int readOffset)
@@ -58,8 +67,8 @@ namespace test
                 // 파일 IO 생성
                 using (var stream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read))
                 {
-                    if (readOffset < 0 || readOffset + readSize > stream.Length)
-                        throw new ArgumentOutOfRangeException(nameof(readOffset), "Offset and size exceed file length");
+                   // if (readOffset < 0 || readOffset + readSize > stream.Length)
+                    //    throw new ArgumentOutOfRangeException(nameof(readOffset), "Offset and size exceed file length");
                     stream.Seek(readOffset, SeekOrigin.Begin); // 파일 처음에서 readOffset만큼 이동
                     // 파일을 IO로 읽어온다.
                     stream.Read(binary, 0, readSize);
