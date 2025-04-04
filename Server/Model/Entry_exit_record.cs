@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client3.Model
+namespace Server.Model
 {
     public class Entry_exit_record
     {

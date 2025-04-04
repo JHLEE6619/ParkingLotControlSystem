@@ -30,3 +30,9 @@ C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\Vie
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Payment.baml
 C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\View\Period_Extension.baml
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\Client3.csproj.AssemblyReference.cache
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\bin\Debug\net8.0-windows\MySqlConnector.dll
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\Client3.csproj.Up2Date

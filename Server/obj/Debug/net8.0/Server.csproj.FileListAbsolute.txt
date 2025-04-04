@@ -34,3 +34,6 @@ C:\Users\LMS\Desktop\주차관리 시스템\Server\obj\Debug\net8.0\refint\Serve
 C:\Users\LMS\Desktop\주차관리 시스템\Server\obj\Debug\net8.0\Server.pdb
 C:\Users\LMS\Desktop\주차관리 시스템\Server\obj\Debug\net8.0\Server.genruntimeconfig.cache
 C:\Users\LMS\Desktop\주차관리 시스템\Server\obj\Debug\net8.0\ref\Server.dll
+C:\Users\LMS\Desktop\주차관리 시스템\Server\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\LMS\Desktop\주차관리 시스템\Server\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\LMS\Desktop\주차관리 시스템\Server\bin\Debug\net8.0\MySqlConnector.dll

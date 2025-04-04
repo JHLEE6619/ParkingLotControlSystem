@@ -12,5 +12,6 @@ namespace Client3.Model
         public string ExitDate { get; set; }
         public string ParkingTime { get; set; }
         public string TotalFee { get; set; }
+        public byte Classification { get; set; }
     }
 }

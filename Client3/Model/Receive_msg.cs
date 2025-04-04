@@ -10,6 +10,6 @@ namespace Client3.Model
     {
         public byte MsgId {  get; set; }
         public User User { get; set; }
-        public Entry_exit_record Vehicle { get; set; }
+        public Record Record { get; set; }
     }
 }

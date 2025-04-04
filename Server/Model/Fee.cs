@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client3.Model
+namespace Server.Model
 {
-    public static class Fee
+    public class Fee
     {
-        public static readonly int fee = 500;
+        public const int fee = 500;
     }
 }

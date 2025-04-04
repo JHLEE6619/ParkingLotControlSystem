@@ -15,8 +15,8 @@ namespace Server.Controller
     {
         public async Task StartFileRcvServer()
         {
-            TcpListener listener = new TcpListener(IPAddress.Any, 10000);
-            Console.WriteLine(" 서버 시작 ");
+            TcpListener listener = new TcpListener(IPAddress.Any, 10001);
+            Console.WriteLine(" 파일 전송서버 시작 ");
             listener.Start();
             while (true)
             {
@@ -49,7 +49,7 @@ namespace Server.Controller
             {
                 int received = 0, len;
 
-                len = stream.Read(buf, 0, buf.Length);
+                len = await stream.ReadAsync(buf, 0, buf.Length).ConfigureAwait(false);
                 //await stream.ReadAsync(buf, 0, 5).ConfigureAwait(false);
                 if (len == 0) break; // 연결 종료
 
